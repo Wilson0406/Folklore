@@ -1,0 +1,160 @@
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="index.php"><b>PRAYAS</b></a>
+    </div>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="provide()"><strong>Provide</strong></button>
+                <button type="button" class="toggle-btn" onclick="require()"><strong>Require</strong></button>
+
+            </div>
+
+            <form id="provide" class="input-group" method="post" action='provide.php'>
+
+                Name<br>
+                <input type="text" name="name" class="input-field" placeholder="Name" required><br><br>Age<br>
+                <input type="number" class="input-field" name="age" placeholder="Age" required><br><br> Organization Type<br><br>
+                <label class="radio" for="pri">Private</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="pri" name="comp" value="Private">&nbsp;
+                <label class="radio" for="ind">Individual</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="ind" name="comp" value="Individual">&nbsp;<br><br>Company Name<br>
+                <input type="text" class="input-field" name="cname" placeholder="Company Name if Private"><br><br> Phone no
+                <br>
+                <input type="text" name="locality" class="input-field" placeholder="Phone no" required>
+                <select name="state" class="input-field" placeholder="State" required>
+                    <option value="">Select State</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhatisgarh">Chhatisgarh</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujrat">Gujrat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerela">Kerela</option>
+                    <option value="Lakhshadeep">Lakhshadeep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttrakhand">Uttrakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    </select>
+
+                <br><br> Service <br>
+                <input type="checkbox" value="Food" name="service[]" class="check-box"><span class="f">Food     </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Shelter" name="service[]" class="check-box"><span class="f">Shelter</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Sanitization" name="service[]" class="check-box"><span class="f">Sanitization</span> &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                <input type="checkbox" value="Medicine/Package Delivery" name="service[]" class="check-box"><span class="t">Medicine/<br>Package <br>Delivery</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Transport" name="service[]" class="check-box"><span class="t">Transport</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Other" name="service[]" class="check-box"><span class="t">Other</span>
+                <br> Are You Licensed?&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="license" value="Yes"> Yes&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="license" value="No"> No
+                <br><br>
+                <button type="submit" name="sub" class="submit-btn">Register</button>
+
+            </form>
+            <form id="require" class="input-group" method="post" action='require.php'>
+
+                Name<br>
+                <input type="text" name="name" class="input-field" placeholder="Name" required><br><br>Age<br>
+                <input type="number" class="input-field" name="age" placeholder="Age" required><br><br>Phone no
+                <br>
+                <input type="text" name="locality" class="input-field" placeholder="Phone no" required>
+                <select name="state" class="input-field" placeholder="State" required>
+                        <option value="">Select State</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhatisgarh">Chhatisgarh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerela">Kerela</option>
+                        <option value="Lakhshadeep">Lakhshadeep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttrakhand">Uttrakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        </select>
+
+                <br><br> Service <br>
+                <input type="checkbox" value="Food" name="service[]" class="check-box"><span class="p">Food     </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Shelter" name="service[]" class="check-box"><span class="p">Shelter</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Sanitization" name="service[]" class="check-box"><span class="p">Sanitization</span> &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                <input type="checkbox" value="Medicine/Package Delivery" name="service[]" class="check-box"><span class="s">Medicine/<br>Package <br>Delivery</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Transport" name="service[]" class="check-box"><span class="s">Transport</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" value="Other" name="service[]" class="check-box"><span class="s">Other</span> <br><br>
+                <button type="submit" name="subm" class="submit-btn">Search</button>
+
+            </form>
+
+
+        </div>
+
+    </div>
+    <script>
+        var x = document.getElementById("provide");
+        var y = document.getElementById("require");
+        var z = document.getElementById("btn");
+
+        function require() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function provide() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>

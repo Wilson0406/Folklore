@@ -1,0 +1,175 @@
+ * {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .topnav {
+     overflow: hidden;
+     background: transparent;
+ }
+ 
+ .topnav a {
+     float: left;
+     color: #ff0000;
+     background: transparent;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+ }
+ 
+ .topnav a:hover {
+     background: transparent;
+     color: black;
+ }
+ 
+ .topnav a.active {
+     background: transparent;
+     color: rgb(255, 0, 0);
+     font-size: 25px;
+ }
+ 
+ .hero {
+     min-height: 112%;
+     width: 100%;
+     background-image: url(assets/images/wor2.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;
+ }
+ 
+ .form-box {
+     color: rgb(245, 203, 147);
+     width: 400px;
+     min-height: 780px;
+     position: relative;
+     margin: 1% auto;
+     padding: 5px;
+     box-sizing: border-box;
+     box-shadow: 10px 10px 50px #000;
+     overflow: hidden;
+ }
+ 
+ .button-box {
+     width: 223px;
+     margin: 35px auto;
+     position: relative;
+     box-shadow: 0 0 20px 9px #ff61241f;
+     border-radius: 35px;
+ }
+ 
+ .toggle-btn {
+     padding: 10px 30px;
+     cursor: pointer;
+     background: transparent;
+     border: 0;
+     outline: none;
+     position: relative;
+ }
+ 
+ #btn {
+     top: 0;
+     left: 0;
+     position: absolute;
+     width: 112px;
+     height: 100%;
+     background: rgb(240, 66, 66);
+     border-radius: 30px;
+     transition: .5s;
+ }
+ 
+ .input-group {
+     top: 100px;
+     color: rgb(0, 0, 0);
+     position: absolute;
+     width: 280px;
+     transition: .5s;
+ }
+ 
+ .input-field {
+     width: 100%;
+     padding: 10px 0;
+     color: rgb(0, 0, 0);
+     margin: 5px 0;
+     border-left: 0;
+     border-top: 0;
+     border-right: 0;
+     border-bottom: 1px solid #000;
+     outline: none;
+     background: transparent;
+     font-size: 10px;
+ }
+ 
+ .submit-btn {
+     width: 75%;
+     padding: 10px 30px;
+     cursor: pointer;
+     display: block;
+     margin: auto;
+     background: rgb(31, 228, 228);
+     border: 0;
+     outline: none;
+     border-radius: 30px;
+ }
+ 
+ .check-box {
+     margin: 30px 10px 30px 0;
+ }
+ 
+ span {
+     color: #000;
+     font-size: 12px;
+     bottom: 83px;
+     position: absolute;
+ }
+ 
+ .f {
+     color: #000;
+     font-size: 12px;
+     bottom: 175px;
+     position: absolute;
+ }
+ 
+ .t {
+     color: #000;
+     font-size: 12px;
+     bottom: 102px;
+     position: absolute;
+ }
+ 
+ .s {
+     color: #000;
+     font-size: 12px;
+     bottom: 84px;
+     position: absolute;
+ }
+ 
+ .p {
+     color: #000;
+     font-size: 12px;
+     bottom: 157px;
+     position: absolute;
+ }
+ 
+ .span {
+     color: #000;
+     font-size: 12px;
+     bottom: 145px;
+     position: absolute;
+ }
+ 
+ .radio {
+     font-size: 12px;
+     bottom: 460px;
+     position: absolute;
+ }
+ 
+ #provide {
+     left: 50px;
+ }
+ 
+ #require {
+     left: 450px;
+ }

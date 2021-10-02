@@ -1,0 +1,536 @@
+<?php
+  $con = mysqli_connect('127.0.0.1','root','','prayas');
+  if(!$con)
+  {
+    echo 'Not connected to server!!';
+  }
+  if(!mysqli_select_db($con,'prayas'))
+  {
+    echo 'Database is not selected!!';
+  }
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>PRAYAS</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/prayas.css">
+    <link rel="stylesheet" href="assets/css/owl-carousel.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+</head>
+
+<body>
+
+    
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+
+
+    <!-- Header Area Start -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- Logo Start -->
+                        <a href="#top" class="logo">
+                            PRAYAS
+                        </a>
+                        <!-- Logo End -->
+                        <!-- Menu Start -->
+                        <ul class="nav">
+
+
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="#projects">Services</a></li>
+                            <li class="scroll-to-section"><a href="#testimonials">FAQS</a></li>
+
+                            <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li>
+                            <li class="scroll-to-section"><a href="form.html">Register</a></li>
+                            <li class="scroll-to-section"><a href="login.html">Admin</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- Menu End -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+            <div class="item">
+                <div class="img-fill">
+                    <img src="assets/images/sanit.jpg" height="800px" width="1600px" alt="">
+                    <div class="text-content">
+                        <h3 style="color:white;text-shadow: 2px 2px #000;"><b>WE VALUE YOU</b></h3>
+                        <h5 style="color:white;text-shadow: 2px 2px #000;"><b>Happy Customers</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img-fill">
+                    <img src="assets/images/value people.jpg" height="800px" width="1600px" alt="">
+                    <div class="text-content">
+                        <h3 style="color:white;text-shadow: 2px 2px #000;"><b>RELIABLE</b></h3>
+                        <h5 style="color:white;text-shadow: 2px 2px #000;"><b>Your safety is our primary concern</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img-fill">
+                    <img src="assets/images/s1.jpg" height="800px" width="1600px" alt="">
+                    <div class="text-content">
+                        <h3 style="color:white;text-shadow: 2px 2px #000;"><b>SWIPE DOWN</b></h3>
+                        <h5 style="color:white;text-shadow: 2px 2px #000;"><b>We are here to help!</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="img-fill">
+                    <img src="assets/images/slide-03.jpg" height="800px" width="1600px" alt="">
+                    <div class="text-content">
+                        <h3 style="color:white;text-shadow: 2px 2px #000;"><b></b></h3>
+                        <h5 style="color:white;text-shadow: 2px 2px #000;"><b></b></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+    <!-- Main Banner Area End -->
+
+    <!-- About Area Starts -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>PRAYAS (<b>P</b>o<b>R</b>tal for <b>A</b>ssisting <b>Y</b>ou <b>A</b>nd <b>S</b>ociety)</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/all.png" alt="">
+                                    <h4>Portable</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/ass.png" alt="">
+                                    <h4>Accessible</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/team.png" alt="">
+                                    <h4>Direct</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="assets/images/tick.png" alt="">
+                                    <h4>Verified</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <a href="#features" class="main-button-icon">
+                                    Swipe down<i class="fa fa-arrow-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-text-content">
+                        <p>PRAYAS is one of the leading social service providing a two-way platform, helping you to connect with the right. On the one hand, it provides you a ray of hope for people in need. In the same time, it provides a verified solution
+                            to all those who are in need of help.
+                            <br><br> Be it related to quality health care, safety and security of citizens, helping the deprived or providing relief packages, we are always there to help you connect right in best way.
+                            <br><br>Choose a cause that is close to your heart and join hands with others who aim to make this world a better place.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Area Ends -->
+
+    <!-- Features Big Item Start -->
+    <center>
+        <section class="section" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 50px over 0.6s after 0.4s">
+                        <div class="features-item">
+
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <br><br><br><br><br>
+                                        <h1>OUR MISSION</h1>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p><br><br>We commit ourselves to identify the need of hour, serve the humanity and to that end act as a resource to and collaborate with other agencies to fulfill the noble cause.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                        <div class="features-item">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <br><br><br><br><br>
+                                        <h1>OUR VISION</h1>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p><br><br><br><br>A society based on social sensitivity and a culture of service to God. Easily accessible resources to one & all.</p>
+                                    </div>
+                                </div>
+                            </div>
+    </center>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </section>
+
+
+
+
+    <!-- Services Area Starts -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="section-heading">
+                        <h6>Our Services</h6>
+                        <h2>Services we can help with</h2>
+                    </div>
+                    <div class="filters">
+                        <ul>
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".des">Shelter</li>
+                            <li data-filter=".gra">Sanitization</li>
+                            <li data-filter=".tsh">Delivery and Transport</li>
+                            <li data-filter=".dev">Food & Essentials</li>
+                            <li data-filter=".tgh">Others</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="filters-content">
+                        <div class="row grid">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
+                                <div class="item">
+                                    <a href="assets/images/project-big-item-02.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-02.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
+                                <div class="item">
+                                    <a href="assets/images/project-big-item-01.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-01.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra">
+                                <div class="item">
+                                    <a href="assets/images/project-big-item-03.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-03.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all gra">
+                                <div class="item">
+                                    <a href="assets/images/sani.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/sani_small.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tsh">
+                                <div class="item">
+                                    <a href="assets/images/med2.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/med2_small.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all dev">
+                                <div class="item">
+                                    <a href="assets/images/project-big-item-06.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-06.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all des">
+                                <div class="item">
+                                    <a href="assets/images/project-big-item-05.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/project-item-05.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tgh">
+                                <div class="item">
+                                    <a href="assets/images/maskmaking.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/maskmaking_small.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 all tgh">
+                                <div class="item">
+                                    <a href="assets/images/onlinetutor.jpg" data-lightbox="image-1" data-title="Our Projects"><img src="assets/images/onlinetutor_small.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Area Ends -->
+
+
+
+
+    <!-- FAQs Area Starts -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h3><strong>FAQs</strong></h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <h5>What is this website all about?</h5><br>
+                                    <p>This website allows someone, who is severely affected by pandemic, to directly connect with people or an organization mostly belonging to private sector who willing to offer essential health services during the current
+                                        COVID19 pandemic.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <h5>How to use this Portal?</h5><br>
+                                    <p>The Service Provider will register himself and his area of work. The customer who require certain service will also register himself and then get a list of all providers of that area and domain. The person can later
+                                        on contact them directly as per the information displayed.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <h5>What makes this Portal Special?</h5><br>
+                                    <p>Many people have lost their job or their salary has reduced. This portal offers them to serve again and earn their daily bread. Also it allows customers to easily connect with verified professionals. Thus it fullfills
+                                        the need of both sides!</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <h5>What services they offer?</h5><br>
+                                    <p>They offer a wide range of services ranging from sanitization, food preparation and distribution, clean and hygenic shelter for the stranded, helping the elderly by providing essential items at their doorstep. There
+                                        are much more too!</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-12 col-xs-12">
+                    <div class="right-text-content">
+                        <br><br><br><br><br><br><br><br><br>
+                        <img src="assets/images/faq.jpeg" height="220px" width="500px">
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+    <!-- FAQs Area Ends -->
+
+    <!-- Query Area Start -->
+    <section class="section" id="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h2>Still got questions?</h2><br><br><br>
+                    </div>
+                    <div class="subscribe-content">
+
+                        <div class="subscribe-form">
+                            <form id="subscribe-now" action="" method="get">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-12">
+                                        <fieldset>
+                                            <input name="text" type="text" name="query" id="email" placeholder="Enter your query..." required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="main-button">Post Query</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Query Area Ends -->
+
+
+    <!-- Contact Us Area Starts -->
+    <section class="section" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Contact Us</h6>
+                            <h2>Feel free to keep in touch with us!</h2>
+                        </div>
+                        <ul class="contact-info">
+                            <li><img src="assets/images/contact-info-01.png" alt="010-020-0860">010-020-0860</li>
+                            <li><img src="assets/images/contact-info-02.png" alt="">prayas@gmail.com</li>
+                            <li><img src="assets/images/contact-info-03.png" alt="">www.prayas.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-xs-12">
+                    <div class="contact-form">
+                        <form id="contact" action="contactus.php" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name *" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="phone" type="text" id="phone" placeholder="Your Phone" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="email" id="email" placeholder="Your Email *" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="subject" placeholder="Subject">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button-icon" name="submit">Send Message Now <i class="fa fa-arrow-right"></i></button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Us Area Ends -->
+
+    <!-- Footer Starts -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <div class="left-text-content">
+
+                        <p><b>RISHANK PRATIK</b> Founder and CEO<br><b>WILSON VIDYUT DOLOY</b> Chairman and CEO
+                            <br>
+                            <br> Copyright &copy; 2020 Prayas Co., Ltd.
+
+
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <div class="right-text-content">
+
+                        <ul class="social-icons">
+                            <p>
+                                <li>
+                                    <br>Follow Us&nbsp;&nbsp;
+                                </li>
+                                <li><a rel="nofollow" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a rel="nofollow" href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="nofollow" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a rel="nofollow" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                            </p>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function() {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function() {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
