@@ -3,35 +3,212 @@
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="form.css">
+    <style>
+        * {
+     margin: 0;
+     padding: 0;
+     font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.topnav {
+     overflow: hidden;
+     background: #36454F;
+}
+ 
+.topnav a {
+     float: left;
+     color: #ff0000;
+     background: transparent;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+}
+ 
+.topnav a:hover {
+     background: transparent;
+     color: black;
+}
+ 
+.topnav a.active {
+     background: transparent;
+     color: rgb(255, 0, 0);
+     font-size: 25px;
+}
+ 
+ 
+ 
+.form-box {
+     background: whitesmoke;
+     width: 400px;
+     min-height: 780px;
+     position: relative;
+     margin: 1% auto;
+     padding: 5px;
+     box-sizing: border-box;
+     box-shadow: 10px 10px 50px #000;
+     overflow: hidden;
+}
+ 
+.button-box {
+     width: 224px;
+     margin: 35px auto;
+     position: relative;
+     box-shadow: 0 0 20px 9px #ff61241f;
+     border-radius: 35px;
+}
+ 
+.toggle-btn {
+     padding: 10px 30px;
+     cursor: pointer;
+     background: transparent;
+     border: 0;
+     outline: none;
+     position: relative;
+}
+ 
+#btn {
+     top: 0;
+     left: 0;
+     position: absolute;
+     width: 112px;
+     height: 100%;
+     background: rgb(240, 66, 66);
+     border-radius: 30px;
+     transition: .5s;
+}
+ 
+.input-group {
+     top: 100px;
+     background-color: transparent;
+     color: rgb(0, 0, 0);
+     position: absolute;
+     width: 280px;
+     transition: .5s;
+}
+ 
+.input-field {
+     width: 100%;
+     padding: 10px 0;
+     color: rgb(0, 0, 0);
+     margin: 5px 0;
+     border-left: 0;
+     border-top: 0;
+     border-right: 0;
+     border-bottom: 1px solid #000;
+     outline: none;
+     background: transparent;
+     font-size: 10px;
+}
+ 
+.submit-btn {
+     width: 75%;
+     padding: 10px 30px;
+     cursor: pointer;
+     display: block;
+     margin: auto;
+     background: rgb(31, 228, 228);
+     border: 0;
+     outline: none;
+     border-radius: 30px;
+}
+ 
+.check-box {
+     margin: 30px 10px 30px 0;
+}
+ 
+span {
+     color: #000;
+     font-size: 12px;
+     bottom: 83px;
+     position: absolute;
+}
+ 
+.f {
+     color: #000;
+     font-size: 12px;
+     bottom: 175px;
+     position: absolute;
+}
+ 
+.t {
+     color: #000;
+     font-size: 12px;
+     bottom: 102px;
+     position: absolute;
+}
+ 
+.s {
+     color: #000;
+     font-size: 12px;
+     bottom: 84px;
+     position: absolute;
+}
+ 
+.p {
+     color: #000;
+     font-size: 12px;
+     bottom: 157px;
+     position: absolute;
+}
+ 
+.span {
+     color: #000;
+     font-size: 12px;
+     bottom: 145px;
+     position: absolute;
+}
+
+.radio {
+     font-size: 12px;
+     bottom: 440px;
+     position: absolute;
+}
+ 
+#provide {
+     left: 50px;
+}
+ 
+#require {
+     left: 450px;
+}
+    </style>
 
 </head>
 
 <body>
     <div class="topnav">
-        <a class="active" href="index.php"><b>PRAYAS</b></a>
+        <a class="active" href="index.php"><b>FolkLore</b></a>
     </div>
-    <div class="hero">
+    <div style="min-height: 100%;
+     width: 100%;
+     background:url(reg.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;">
         <div class="form-box">
             <div class="button-box">
                 <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="provide()"><strong>Provide</strong></button>
-                <button type="button" class="toggle-btn" onclick="require()"><strong>Require</strong></button>
+                <button type="button" class="toggle-btn" onclick="provide()"><strong>Artists</strong></button>
+
+                <button type="button" class="toggle-btn" onclick="require()"><strong>Planners</strong></button>
 
             </div>
 
-            <form id="provide" class="input-group" method="post" action='provide.php'>
+            <form id="require" class="input-group" method="post" action='require.php'>
 
                 Name<br>
-                <input type="text" name="name" class="input-field" placeholder="Name" required><br><br>Age<br>
-                <input type="number" class="input-field" name="age" placeholder="Age" required><br><br> Organization Type<br><br>
-                <label class="radio" for="pri">Private</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" id="pri" name="comp" value="Private">&nbsp;
-                <label class="radio" for="ind">Individual</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" id="ind" name="comp" value="Individual">&nbsp;<br><br>Company Name<br>
-                <input type="text" class="input-field" name="cname" placeholder="Company Name if Private"><br><br> Phone no
+                <input type="text" name="name" class="input-field" placeholder="Name" required><br><br>
+                ID<br>
+                <input type="number" class="input-field" name="id" placeholder="ID" required><br><br> Organization Type<br><br>
+                <font size=2>Organizer</font>&nbsp;&nbsp;<input type="radio" name="type" value="Private">&nbsp;&nbsp;&nbsp;&nbsp;
+                <font size=2>Individual</font>&nbsp;&nbsp;<input type="radio" name="type" value="Individual"><br><br>
+                Company Name<br>
+                <input type="text" class="input-field" name="cname" placeholder="Company Name if Private"><br><br> 
+                Phone no
                 <br>
-                <input type="text" name="locality" class="input-field" placeholder="Phone no" required>
+                <input type="number" name="phone" class="input-field" placeholder="Phone no" required><br><br>
                 <select name="state" class="input-field" placeholder="State" required>
                     <option value="">Select State</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -68,26 +245,21 @@
                     <option value="West Bengal">West Bengal</option>
                     </select>
 
-                <br><br> Service <br>
-                <input type="checkbox" value="Food" name="service[]" class="check-box"><span class="f">Food     </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Shelter" name="service[]" class="check-box"><span class="f">Shelter</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Sanitization" name="service[]" class="check-box"><span class="f">Sanitization</span> &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                <input type="checkbox" value="Medicine/Package Delivery" name="service[]" class="check-box"><span class="t">Medicine/<br>Package <br>Delivery</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Transport" name="service[]" class="check-box"><span class="t">Transport</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Other" name="service[]" class="check-box"><span class="t">Other</span>
+                <br><br>
                 <br> Are You Licensed?&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="license" value="Yes"> Yes&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="license" value="No"> No
                 <br><br>
-                <button type="submit" name="sub" class="submit-btn">Register</button>
+                <button type="submit" name="subm" class="submit-btn">Register</button>
 
             </form>
-            <form id="require" class="input-group" method="post" action='require.php'>
+            <form id="provide" class="input-group" method="post" action='provide.php'>
 
                 Name<br>
-                <input type="text" name="name" class="input-field" placeholder="Name" required><br><br>Age<br>
-                <input type="number" class="input-field" name="age" placeholder="Age" required><br><br>Phone no
-                <br>
-                <input type="text" name="locality" class="input-field" placeholder="Phone no" required>
-                <select name="state" class="input-field" placeholder="State" required>
+                <input type="text" name="name" class="input-field" placeholder="name"><br><br>
+                Group Name<br><input type="text" class="input-field" name="gname" placeholder="Group Name"><br><br>
+                Aadhar<br><input type="text" class="input-field" name="id" placeholder="Aadhar" required><br><br>
+                Video Link<br><input type="text" class="input-field" name="link" placeholder="Video Link"><br><br>
+                Phone No<br><input type="number" class="input-field" name="phone" class="input-field" placeholder="Phone no" required><br><br>
+                <select name="state" class="input-field" placeholder="state" required>
                         <option value="">Select State</option>
                         <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -123,14 +295,8 @@
                         <option value="West Bengal">West Bengal</option>
                         </select>
 
-                <br><br> Service <br>
-                <input type="checkbox" value="Food" name="service[]" class="check-box"><span class="p">Food     </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Shelter" name="service[]" class="check-box"><span class="p">Shelter</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Sanitization" name="service[]" class="check-box"><span class="p">Sanitization</span> &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                <input type="checkbox" value="Medicine/Package Delivery" name="service[]" class="check-box"><span class="s">Medicine/<br>Package <br>Delivery</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Transport" name="service[]" class="check-box"><span class="s">Transport</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" value="Other" name="service[]" class="check-box"><span class="s">Other</span> <br><br>
-                <button type="submit" name="subm" class="submit-btn">Search</button>
+                <br><br>
+                <button type="submit" name="sub" class="submit-btn">Register</button>
 
             </form>
 

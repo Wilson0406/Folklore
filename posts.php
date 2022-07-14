@@ -1,10 +1,10 @@
 <?php
-  $con = mysqli_connect('127.0.0.1','root','','prayas');
+  $con = mysqli_connect('127.0.0.1','root','','folklore');
   if(!$con)
   {
     echo 'Not connected to server!!';
   }
-  if(!mysqli_select_db($con,'prayas'))
+  if(!mysqli_select_db($con,'folklore'))
   {
     echo 'Database is not selected!!';
   }
@@ -18,8 +18,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Area | Provider</title>
-    
+    <title>Admin Area | Organizers</title>
+    <!-- Bootstrap core CSS -->
     <link href="css/adminbootstrap.min.css" rel="stylesheet">
     <link href="css/adminstyle.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
@@ -35,20 +35,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><b>PRAYAS</b></a>
+          <a class="navbar-brand" href="index.php"><b>FolkLore</b></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="admin.php">Dashboard</a></li>
             <li><a href="pages.php">Comments</a></li>
-            <li class="active"><a href="posts.php">Provider</a></li>
-            <li><a href="users.php">Users</a></li>
+            <li class="active"><a href="posts.php">Organizers</a></li>
+            <li><a href="users.php">Artists</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Admin</a></li>
             <li><a href="login.html">Logout</a></li>
           </ul>
-        </div>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -56,7 +56,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Provider<small> Manage Providers</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Organizer<small> Manage Organizers</small></h1>
           </div>
           <div class="col-md-2">
             <div class="dropdown create">
@@ -79,7 +79,7 @@
       <div class="container">
         <ol class="breadcrumb">
           <li><a href="admin.php">Dashboard</a></li>
-          <li class="active">Provider</li>
+          <li class="active">Organizer</li>
         </ol>
       </div>
     </section>
@@ -101,17 +101,17 @@
               ?>
 
               </span></a>
-              <a href="posts.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Provider <span class="badge">
+              <a href="posts.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Organizers <span class="badge">
               <?php
-                $count="SELECT count(*) as p from prov";
+                $count="SELECT count(*) as p from req";
                 $result = mysqli_query($con, $count);
                 $row=mysqli_fetch_assoc($result);
                 echo $row["p"];
               ?>
               </span></a>
-              <a href="users.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">
+              <a href="users.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Artists <span class="badge">
               <?php
-                $count="SELECT count(*) as c from req";
+                $count="SELECT count(*) as c from prov";
                 $result = mysqli_query($con, $count);
                 $row=mysqli_fetch_assoc($result);
                 echo $row["c"];
@@ -135,9 +135,10 @@
             </div>
           </div>
           <div class="col-md-9">
+            <!-- Website Overview -->
             <div class="panel panel-default">
               <div class="panel-heading main-color-bg">
-                <h3 class="panel-title">Provider</h3>
+                <h3 class="panel-title">Organizers</h3>
               </div>
               <div class="panel-body">
                 <div class="row">
@@ -149,15 +150,15 @@
                 <table class="table table-striped table-hover">
                       <tr>
                         <th>Name</th>
-                        <th>Service</th>
                         <th>Type</th>
+                        <th>Company Name</h>
                         <th></th>
                         <th>Action</th>
                       </tr>
                       <tr>
 
                       <?php
-                          $com="SELECT * from prov ";
+                          $com="SELECT * from req ";
                           $result = mysqli_query($con, $com);
 
                           if (mysqli_num_rows($result) > 0)
@@ -165,8 +166,8 @@
                             while($row = $result->fetch_assoc())
                             {
                               $field1name = $row["name"];
-                              $field2name = $row["service"];
-                              $field3name = $row["type"];
+                              $field2name = $row["type"];
+                              $field3name = $row["cname"];
 
                               echo '<tr><td>'.$field1name.'</td><td>'.$field2name.'</td><td>'.$field3name.'</td><td>';
 
@@ -186,9 +187,12 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright PRAYAS &copy; 2020</p>
+      <p>Copyright FolkLore &copy; 2022</p>
     </footer>
 
+    <!-- Modals -->
+
+    <!-- Add Page -->
     <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -232,6 +236,10 @@
   <script>
      CKEDITOR.replace( 'editor1' );
  </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>

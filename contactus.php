@@ -1,12 +1,12 @@
 <?php
 if(isset($_POST['submit']))  
 { 
-$con = mysqli_connect('127.0.0.1','root','','prayas');
+$con = mysqli_connect('127.0.0.1','root','','folklore');
 if(!$con)
 {
     echo 'Not connected to server!!';
 }
-if(!mysqli_select_db($con,'prayas'))
+if(!mysqli_select_db($con,'folklore'))
 {
     echo 'Database is not selected!!';
 }

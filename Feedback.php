@@ -41,7 +41,7 @@
         $chart->setDataSet($dataSet);
  
         //set chart title
-        $chart->setTitle("Tiobe Top Programming Languages for June 2020");
+        $chart->setTitle("Tiobe Top Programming Languages for June 2012");
         
         //render as an image and store under "generated" folder
         $chart->render("generated/1.png");

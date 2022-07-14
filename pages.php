@@ -1,10 +1,10 @@
 <?php
-  $con = mysqli_connect('127.0.0.1','root','','prayas');
+  $con = mysqli_connect('127.0.0.1','root','','folklore');
   if(!$con)
   {
     echo 'Not connected to server!!';
   }
-  if(!mysqli_select_db($con,'prayas'))
+  if(!mysqli_select_db($con,'folklore'))
   {
     echo 'Database is not selected!!';
   }
@@ -19,6 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Area | Comments</title>
+    <!-- Bootstrap core CSS -->
     <link href="css/adminbootstrap.min.css" rel="stylesheet">
     <link href="css/adminstyle.css" rel="stylesheet">
     <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
@@ -34,20 +35,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php"><b>PRAYAS</b></a>
+          <a class="navbar-brand" href="index.php"><b>FolkLore</b></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="admin.php">Dashboard</a></li>
             <li class="active"><a href="pages.php">Comments</a></li>
-            <li><a href="posts.php">Provider</a></li>
-            <li><a href="users.php">Users</a></li>
+            <li><a href="posts.php">Organizers</a></li>
+            <li><a href="users.php">Artists</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Admin</a></li>
             <li><a href="login.html">Logout</a></li>
           </ul>
-        </div>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
 
@@ -100,18 +101,18 @@
               ?>
 
               </span></a>
-              <a href="posts.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Provider <span class="badge">
+              <a href="posts.php" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Organizers <span class="badge">
               <?php
-                $count="SELECT count(*) as p from prov";
+                $count="SELECT count(*) as p from req";
                 $result = mysqli_query($con, $count);
                 $row=mysqli_fetch_assoc($result);
                 echo $row["p"];
               ?>
               </span></a>
 
-              <a href="users.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">
+              <a href="users.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Artists <span class="badge">
               <?php
-                $count="SELECT count(*) as c from req";
+                $count="SELECT count(*) as c from prov";
                 $result = mysqli_query($con, $count);
                 $row=mysqli_fetch_assoc($result);
                 echo $row["c"];
@@ -193,10 +194,12 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright PRAYAS, &copy; 2020</p>
+      <p>Copyright FolkLore, &copy; 2022</p>
     </footer>
 
-    
+    <!-- Modals -->
+
+    <!-- Add Page -->
     <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -240,6 +243,10 @@
   <script>
      CKEDITOR.replace( 'editor1' );
  </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
@@ -255,6 +262,9 @@ $con = mysqli_connect('127.0.0.1','root','','prayas');
   {
     echo 'Database is not selected!!';
   }
+
+//include '../../contactus.php';
+//$Phone = mysqli_real_escape_string($con,$_GET['field2name']);
 
   if(isset($_POST['accept_admin']))
   {
